@@ -64,7 +64,7 @@ flowchart TD
     B --> C{For each song...}
     C --> D[Score: Genre match?\n+3.0 pts if yes]
     D --> E[Score: Mood match?\n+2.0 pts if yes]
-    E --> F[Score: Energy proximity\n1.0 − |song.energy − target_energy|]
+    E --> F[Score: Energy proximity\n1.0 - abs song.energy - target_energy]
     F --> G[Score: Acoustic bonus?\n+0.5 pts if likes_acoustic and acousticness > 0.6]
     G --> H[(song, total_score, explanation)]
     H --> C
